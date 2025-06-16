@@ -113,6 +113,16 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/LLGCAllIWantIsYou/urb
     end
 end)()
 
+--Ahead
+coroutine.wrap(function()
+    while true do
+        wait(math.random(71,300))
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(1)
+loadstring(game:HttpGet('https://raw.githubusercontent.com/LLGCAllIWantIsYou/urban-broccoli/refs/heads/main/Ahead.lua'))()
+    end
+end)()
+--RTX
 if getgenv().RTX then
 
     coroutine.wrap(function()
