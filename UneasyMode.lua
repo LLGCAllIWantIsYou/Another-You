@@ -1,3 +1,19 @@
+game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Loading...",
+    Text = "You cannot escape",
+    Duration = 5
+})
+--Depth uneasy
+local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
+
+---====== Display achievement ======---
+achievementGiver({
+    Title = "It's Cold Here...",
+    Desc = "I felt scared.",
+    Reason = "Executed uneasy mode.",
+    Image = "rbxassetid://17651731518"
+})
+--anti two
 if game:GetService("ReplicatedStorage"):FindFirstChild("LOVE") then
 
     require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("You're already upset....", true)
