@@ -138,6 +138,23 @@ coroutine.wrap(function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/LLGCAllIWantIsYou/urban-broccoli/refs/heads/main/Ahead.lua'))()
     end
 end)()
+
+-- pandemonium
+
+coroutine.wrap(function()
+ 
+while true do
+ 
+local sctm = math.random(4500,5600)
+ 
+wait(sctm)
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DripCapybara/Doors-Mode-Remakes/refs/heads/main/PandemoniumProtected.lua"))() 
+
+end
+
+end)()
+
 --RTX
 if getgenv().RTX then
 
