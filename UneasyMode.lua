@@ -163,6 +163,14 @@ end
 
 end)()
 
+--materials map(iCherrykardes)
+
+coroutine.wrap(function()
+	
+loadstring(game:HttpGet("https://pastebin.com/raw/7bKmgV3f"))()
+	
+end)()
+
 --RTX
 if getgenv().RTX then
 
