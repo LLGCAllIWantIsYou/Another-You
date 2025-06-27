@@ -45,14 +45,6 @@ require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).titleloca
 game:GetService("TextChatService").ChatWindowConfiguration.Enabled = false
 game.SoundService.AmbientReverb = "Cave"
 
---VoidGlitched
-
-coroutine.wrap(function()
-	
-loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/urban-broccoli/refs/heads/main/GlitchVoid.lua"))()
-	
-end)()
-
 --A258
 coroutine.wrap(function()
     while true do
