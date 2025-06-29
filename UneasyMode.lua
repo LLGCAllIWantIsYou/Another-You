@@ -13,7 +13,7 @@ achievementGiver({
     Reason = "Executed uneasy mode.",
     Image = "rbxassetid://17651731518"
 })
---anti two
+--anti two(Muhammad)
 if game:GetService("ReplicatedStorage"):FindFirstChild("LOVE") then
 
     require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("You're already upset....", true)
@@ -85,7 +85,7 @@ loadstring(game:HttpGet('https://pastebin.com/raw/MXW9rVV3'))()
     end
 end)()
 
---Victrola
+--Victrola(check78 but i fix it )
 
 coroutine.wrap(function()
 	
@@ -121,7 +121,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/LLGCAllIWantIsYou/urb
     end
 end)()
 
---Ahead
+--Ahead(Anzor)
 coroutine.wrap(function()
     while true do
         wait(math.random(71,300))
@@ -131,7 +131,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/LLGCAllIWantIsYou/urb
     end
 end)()
 
--- pandemonium
+-- pandemonium(dripcapybara)
 
 coroutine.wrap(function()
  
@@ -171,7 +171,23 @@ loadstring(game:HttpGet("https://pastebin.com/raw/7bKmgV3f"))()
 	
 end)()
 
---RTX
+-- ambience sound1
+
+coroutine.wrap(function()
+ 
+while true do
+ 
+local sb = math.random(60,100)
+ 
+wait(sb)
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/green-fog/refs/heads/main/MP3player.lua"))()
+
+end
+
+end)()
+
+--RTX(idk fog)
 if getgenv().RTX then
 
     coroutine.wrap(function()
