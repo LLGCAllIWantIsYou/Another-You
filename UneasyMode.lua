@@ -187,6 +187,14 @@ end
 
 end)()
 
+--eyes scary
+
+coroutine.wrap(function()
+	
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/urban-broccoli/refs/heads/main/ScaryEyes.lua"))()
+	
+end)()
+
 --RTX(idk fog)
 if getgenv().RTX then
 
