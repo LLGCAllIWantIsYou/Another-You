@@ -1,3 +1,4 @@
+--Hello
 game:GetService("StarterGui"):SetCore("SendNotification", {
     Title = "Loading...",
     Text = "You cannot escape",
@@ -192,6 +193,14 @@ end)()
 coroutine.wrap(function()
 	
 loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/urban-broccoli/refs/heads/main/ScaryEyes.lua"))()
+	
+end)()
+
+--House number prefix(X-001)
+
+coroutine.wrap(function()
+	
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/urban-broccoli/refs/heads/main/S-.lua"))()
 	
 end)()
 
