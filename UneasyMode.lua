@@ -95,11 +95,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/urb
 	
 end)()
 
---Candle
+--Sprint
 
 coroutine.wrap(function()
 	
-loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/urban-broccoli/refs/heads/main/Candle.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Focuslol666/RbxScripts/refs/heads/main/DOORS/StaminaSystem.lua"))()
 	
 end)()
 
