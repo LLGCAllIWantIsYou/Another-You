@@ -2,7 +2,8 @@
 game:GetService("StarterGui"):SetCore("SendNotification", {
     Title = "Loading...",
     Text = "You cannot escape",
-    Duration = 5
+    Duration = 5,
+    Icon = "rbxassetid://12537555348"
 })
 --Depth uneasy
 local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
@@ -202,6 +203,15 @@ coroutine.wrap(function()
 	
 loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/urban-broccoli/refs/heads/main/S-.lua"))()
 	
+end)()
+
+--Specter
+coroutine.wrap(function()
+    while true do
+        wait(math.random(100,420))
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/LLGCAllIWantIsYou/urban-broccoli/refs/heads/main/Specter.lua'))()
+    end
 end)()
 
 --RTX(idk fog)
