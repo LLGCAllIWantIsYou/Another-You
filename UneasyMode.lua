@@ -214,11 +214,19 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/LLGCAllIWantIsYou/urb
     end
 end)()
 
---UI
+--OG Rush
 
 coroutine.wrap(function()
 	
-loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/urban-broccoli/refs/heads/main/WarningUI.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/urban-broccoli/refs/heads/main/OgRush.lua"))()
+	
+end)()
+
+--NM ambush
+
+coroutine.wrap(function()
+	
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/urban-broccoli/refs/heads/main/NMAmbush.lua"))()
 	
 end)()
 
@@ -229,3 +237,9 @@ if getgenv().RTX then
         loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/urban-broccoli/refs/heads/main/RTX.lua"))()
     end)()
 end
+
+wait(1)
+
+loadstring(request({Url="https://raw.githubusercontent.com/LLGCAllIWantIsYou/urban-broccoli/refs/heads/main/WarningUI.lua"}).Body)()
+
+
