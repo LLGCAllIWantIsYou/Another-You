@@ -214,6 +214,14 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/LLGCAllIWantIsYou/urb
     end
 end)()
 
+--UI
+
+coroutine.wrap(function()
+	
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/urban-broccoli/refs/heads/main/WarningUI.lua"))()
+	
+end)()
+
 --RTX(idk fog)
 if getgenv().RTX then
 
