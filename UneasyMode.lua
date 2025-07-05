@@ -276,4 +276,12 @@ wait(5)
 
 loadstring(request({Url="https://raw.githubusercontent.com/LLGCAllIWantIsYou/urban-broccoli/refs/heads/main/WarningUI.lua"}).Body)()
 
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+
+require(game.ReplicatedStorage.ClientModules.EntityModules.Glitch).stuff(require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game), workspace.CurrentRooms[game.Players.LocalPlayer:GetAttribute("CurrentRoom")])
+
+wait(5)
+
+require(game.ReplicatedStorage.ClientModules.EntityModules.Void).stuff(require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game), workspace.CurrentRooms[game.Players.LocalPlayer:GetAttribute("CurrentRoom")])
+
 
