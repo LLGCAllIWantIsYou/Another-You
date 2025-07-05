@@ -256,6 +256,14 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/urb
 	
 end)()
 
+--HaltGlitch(glitchambush made it)
+
+coroutine.wrap(function()
+	
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/urban-broccoli/refs/heads/main/GlitchHalt.lua"))()
+	
+end)()
+
 --RTX(idk fog)
 if getgenv().RTX then
 
