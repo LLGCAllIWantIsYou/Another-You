@@ -230,6 +230,32 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/urb
 	
 end)()
 
+--Scream
+coroutine.wrap(function()
+    while true do
+        wait(math.random(50,514))
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0.5)
+loadstring(game:HttpGet('https://raw.githubusercontent.com/LLGCAllIWantIsYou/urban-broccoli/refs/heads/main/Scream.lua'))()
+    end
+end)()
+
+--LightRed
+
+coroutine.wrap(function()
+	
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/urban-broccoli/refs/heads/main/Light.lua"))()
+	
+end)()
+
+--Shape
+
+coroutine.wrap(function()
+	
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/urban-broccoli/refs/heads/main/Shape.lua"))()
+	
+end)()
+
 --RTX(idk fog)
 if getgenv().RTX then
 
@@ -238,7 +264,7 @@ if getgenv().RTX then
     end)()
 end
 
-wait(1)
+wait(5)
 
 loadstring(request({Url="https://raw.githubusercontent.com/LLGCAllIWantIsYou/urban-broccoli/refs/heads/main/WarningUI.lua"}).Body)()
 
