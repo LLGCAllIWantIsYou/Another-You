@@ -159,7 +159,7 @@ local sctm = math.random(40,100)
  
 wait(sctm)
 
-loadstring(game:HttpGet("https://pastebin.com/raw/ivWM9tjS"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/green-fog/refs/heads/main/ShY.lua"))()
 
 end
 
@@ -169,7 +169,7 @@ end)()
 
 coroutine.wrap(function()
 	
-loadstring(game:HttpGet("https://pastebin.com/raw/7bKmgV3f"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/urban-broccoli/refs/heads/main/icherryKardes.lua"))()
 	
 end)()
 
