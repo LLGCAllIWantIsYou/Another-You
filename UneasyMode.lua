@@ -264,13 +264,29 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/urb
 	
 end)()
 
---The BOILED ONE
+--The BOILED ONE[Credits to OG Hunger]
 coroutine.wrap(function()
     while true do
         wait(math.random(250,500))
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/LLGCAllIWantIsYou/urban-broccoli/refs/heads/main/Theboiledone.lua'))()
     end
+end)()
+
+-- A-55
+
+coroutine.wrap(function()
+ 
+while true do
+ 
+local ok = math.random(290,377)
+ 
+wait(ok)
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/urban-broccoli/refs/heads/main/A-55.lua"))() 
+
+end
+
 end)()
 
 --RTX(idk fog)
