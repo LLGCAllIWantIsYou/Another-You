@@ -236,14 +236,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/urb
 	
 end)()
 
---fonT
-
-coroutine.wrap(function()
-	
-loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/urban-broccoli/refs/heads/main/FONT.lua"))()
-	
-end)()
-
 --The BOILED ONE[Credits to OG Hunger]
 coroutine.wrap(function()
     while true do
