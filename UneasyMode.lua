@@ -57,6 +57,14 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/LLGCAllIWantIsYou/urb
     end
 end)()
 
+--NewSound
+
+coroutine.wrap(function()
+	
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/urban-broccoli/refs/heads/main/EntityUneasySound.lua"))()
+	
+end)()
+
 --Dear(A variant of dread)
 coroutine.wrap(function()
     while true do
