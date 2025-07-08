@@ -279,6 +279,21 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/LLGCAllIWantIsYou/urb
     end
 end)()
 
+--Bliss but bad
+coroutine.wrap(function()
+ 
+while true do
+ 
+local sm = math.random(900,1000)
+ 
+wait(sm)
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/urban-broccoli/refs/heads/main/Bliss.lua"))()
+
+end
+
+end)()
+
 --RTX(idk fog)
 if getgenv().RTX then
 
