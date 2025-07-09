@@ -65,6 +65,16 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/Doo
 	
 end)()
 
+--Lurk
+coroutine.wrap(function()
+    while true do
+        wait(1008)
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(521)
+loadstring(game:HttpGet('https://raw.githubusercontent.com/LLGCAllIWantIsYou/green-fog/refs/heads/main/Lurk.lua'))()
+    end
+end)()
+
 --doorssndaa
 
 coroutine.wrap(function()
