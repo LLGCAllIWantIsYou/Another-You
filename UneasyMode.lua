@@ -65,6 +65,14 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/Doo
 	
 end)()
 
+--doorssndaa
+
+coroutine.wrap(function()
+	
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/Doors-Custom-Things/refs/heads/main/DoorsSound.lua"))()
+	
+end)()
+
 --Cave Ambience
 
 coroutine.wrap(function()
