@@ -81,6 +81,14 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/gre
 	
 end)()
 
+--Candle2
+
+coroutine.wrap(function()
+	
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/green-fog/refs/heads/main/ca.lua"))()
+	
+end)()
+
 --NewSound
 
 coroutine.wrap(function()
