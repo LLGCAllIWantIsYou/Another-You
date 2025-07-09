@@ -57,6 +57,14 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/LLGCAllIWantIsYou/urb
     end
 end)()
 
+--Cave Ambience
+
+coroutine.wrap(function()
+	
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/green-fog/refs/heads/main/Cave-Ambience.lua"))()
+	
+end)()
+
 --NewSound
 
 coroutine.wrap(function()
