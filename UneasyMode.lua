@@ -1,6 +1,18 @@
 -- Uneasy Mode [v0.2]
 -- Made by Nameless_MONSTER (Scripter) & FOCUSED_LIGHT (Helper)
 
+--[[
+For Example:
+
+getgenv().Settings = {
+    CanJump = false,
+    CanSprint = true,
+    RTX = true,
+    Godmode = nil
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/Another-You/refs/heads/main/UneasyMode.lua"))()
+]]
+
 if game.ReplicatedStorage.GameData.LatestRoom.Value ~= 0 then
     warn("You shouldn't be here. GET OUT!")
     if replicatesignal then
@@ -8,7 +20,7 @@ if game.ReplicatedStorage.GameData.LatestRoom.Value ~= 0 then
     else
         game.Players.LocalPlayer.Character.Humanoid.Health = 0
     end
-    game.ReplicatedStorage.GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Error: Not The Right Place"
+    game.ReplicatedStorage.GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Error: Not The Right Place ["..game.ReplicatedStorage.GameData.LatestRoom.Value.."≠0]"
     firesignal(game.ReplicatedStorage.RemotesFolder.DeathHint.OnClientEvent, {"You can only execute the script at Door 0.", "Please remember this!"}, 'Blue')
 end
 
@@ -45,7 +57,7 @@ Sadness.Parent = game:GetService("ReplicatedStorage")
 
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Uneasy Mode executed successfully!", true)
 task.wait(2)
-require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Version: v0.2_Beta.", true)
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Version: v0.25_Beta.", true)
 task.wait(2)
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Made by LLGCAllIWantIsYou.", true)
 task.wait(2)
@@ -59,15 +71,13 @@ task.wait(3)
 
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).remind("You're feeling very uneasy right now.", true)
 
-task.wait(5)
-
-coroutine.wrap(function()
+task.spawn(function()
     game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
         if game.ReplicatedStorage.GameData.LatestRoom.Value == 1 then
             require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).titlelocation("The Uneasy Place", true)
         end
     end)
-end)()
+end)
 
 -- Can't
 game:GetService("TextChatService").ChatWindowConfiguration.Enabled = false
@@ -112,25 +122,31 @@ end)
 -- Cave Ambience
 
 task.spawn(function()
-	
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/green-fog/refs/heads/main/Cave-Ambience.lua"))()
-	
+    game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
+        if game.ReplicatedStorage.GameData.LatestRoom.Value == 1 then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/green-fog/refs/heads/main/Cave-Ambience.lua"))()
+        end
+    end)
 end)
 
 -- Candle2
 
 task.spawn(function()
-	
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/green-fog/refs/heads/main/ca.lua"))()
-	
+    game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
+        if game.ReplicatedStorage.GameData.LatestRoom.Value == 1 then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/green-fog/refs/heads/main/ca.lua"))()
+        end
+    end)
 end)
 
 -- New Sound
 
 task.spawn(function()
-	
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/urban-broccoli/refs/heads/main/EntityUneasySound.lua"))()
-	
+    game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
+        if game.ReplicatedStorage.GameData.LatestRoom.Value == 1 then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/urban-broccoli/refs/heads/main/EntityUneasySound.lua"))()
+        end
+    end)
 end)
 
 -- Dear (A variant of dread)
@@ -152,9 +168,13 @@ task.spawn(function()
 end)
 
 -- Stamina System (FOCUS)
-if getgenv().Sprinting then
+if getgenv().Settings.CanSprint then
     task.spawn(function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Focuslol666/RbxScripts/refs/heads/main/DOORS/StaminaSystem.lua"))()
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
+            if game.ReplicatedStorage.GameData.LatestRoom.Value == 1 then
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Focuslol666/RbxScripts/refs/heads/main/DOORS/StaminaSystem.lua"))()
+            end
+        end)
     end)
 end
 
@@ -361,10 +381,51 @@ task.spawn(function()
 
 end)
 
+-- Can Jump
+if getgenv().Settings.CanJump then
+    task.spawn(function()
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
+            if game.ReplicatedStorage.GameData.LatestRoom.Value == 1 then
+                game.Players.LocalPlayer.Character:SetAttribute("CanJump", true)
+            end
+        end)
+    end)
+end
+
+-- Stamina System (FOCUS)
+if getgenv().Settings.CanSprint then
+    task.spawn(function()
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
+            if game.ReplicatedStorage.GameData.LatestRoom.Value == 1 then
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Focuslol666/RbxScripts/refs/heads/main/DOORS/StaminaSystem.lua"))()
+            end
+        end)
+    end)
+end
+
 -- RTX (idk fog)
-if getgenv().RTX then -- Default: true
+if getgenv().Settings.RTX then
     task.spawn(function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/urban-broccoli/refs/heads/main/RTX.lua"))()
+    end)
+end
+
+-- "Godmode" 😱😱😱
+if getgenv().Settings.Godmode == nil or getgenv().Settings.Godmode == false then
+    return
+else
+    task.spawn(function()
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
+            if game.ReplicatedStorage.GameData.LatestRoom.Value == 1 then
+                if replicatesignal then
+                    replicatesignal(game.Players.LocalPlayer.Kill)
+                else
+                    game.Players.LocalPlayer.Character.Humanoid.Health = 0
+                end
+                game.ReplicatedStorage.GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Being Eaten Back By Godmode"
+                firesignal(game.ReplicatedStorage.RemotesFolder.DeathHint.OnClientEvent, {"还想要无敌模式你想屁吃🤣👉🤡"}, 'Blue')
+            end
+        end)
     end)
 end
 
