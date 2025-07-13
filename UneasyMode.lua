@@ -1,3 +1,5 @@
+local caption = game.Players.LocalPlayer:WaitForChild("PlayerGui").MainUI.MainFrame.Caption
+caption.TextColor3 = Color3.fromRGB(0, 0, 0)
 --Hello
 game:GetService("StarterGui"):SetCore("SendNotification", {
     Title = "Loading...",
