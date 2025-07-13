@@ -1,3 +1,6 @@
+-- Uneasy Mode [v0.2]
+-- Made by Nameless_MONSTER (Scripter) & FOCUSED_LIGHT (Helper)
+
 if game.ReplicatedStorage.GameData.LatestRoom.Value ~= 0 then
     warn("You shouldn't be here. GET OUT!")
     if replicatesignal then
