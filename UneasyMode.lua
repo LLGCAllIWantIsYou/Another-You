@@ -1,13 +1,16 @@
--- Uneasy Mode [v0.2]
+-- Uneasy Mode [v0.45]
 -- Made by Nameless_MONSTER (Scripter) & FOCUSED_LIGHT (Helper)
 
 --[[
-For Example:
+Settings, can modify some materials or player attributes, and so on.
+The following is the default config.
 
+For Example:
 getgenv().Settings = {
     CanJump = false,
     CanSprint = true,
-    RTX = true,
+    ReMaterials = true,
+    RTX = false,
     Godmode = nil
 }
 loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/Another-You/refs/heads/main/UneasyMode.lua"))()
@@ -114,9 +117,11 @@ end)
 -- doorssndaa
 
 task.spawn(function()
-	
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/Doors-Custom-Things/refs/heads/main/DoorsSound.lua"))()
-	
+    game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
+        if game.ReplicatedStorage.GameData.LatestRoom.Value == 1 then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/Doors-Custom-Things/refs/heads/main/DoorsSound.lua"))()
+        end
+    end)
 end)
 
 -- Cave Ambience
@@ -238,14 +243,6 @@ task.spawn(function()
 
     end
 
-end)
-
--- materials map (iCherrykardes)
-
-task.spawn(function()
-	
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/urban-broccoli/refs/heads/main/icherryKardes.lua"))()
-	
 end)
 
 -- ambience sound1
@@ -400,6 +397,13 @@ if getgenv().Settings.CanSprint then
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/Focuslol666/RbxScripts/refs/heads/main/DOORS/StaminaSystem.lua"))()
             end
         end)
+    end)
+end
+
+-- materials map (iCherrykardes)
+if getgenv().Settings.ReMaterials then
+    task.spawn(function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/urban-broccoli/refs/heads/main/icherryKardes.lua"))()
     end)
 end
 
