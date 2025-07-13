@@ -60,7 +60,7 @@ Sadness.Parent = game:GetService("ReplicatedStorage")
 
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Uneasy Mode executed successfully!", true)
 task.wait(2)
-require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Version: v0.25_Beta.", true)
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Version: v0.45_Beta.", true)
 task.wait(2)
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Made by LLGCAllIWantIsYou.", true)
 task.wait(2)
