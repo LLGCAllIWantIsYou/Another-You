@@ -426,7 +426,7 @@ else
                 else
                     game.Players.LocalPlayer.Character.Humanoid.Health = 0
                 end
-                game.ReplicatedStorage.GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Being Eaten Back By Godmode"
+                game.ReplicatedStorage.GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Being Eaten Back By God"
                 firesignal(game.ReplicatedStorage.RemotesFolder.DeathHint.OnClientEvent, {"还想要无敌模式你想屁吃🤣👉🤡"}, 'Blue')
             end
         end)
@@ -435,7 +435,7 @@ end
 
 task.wait(5)
 
-loadstring(request({Url="https://raw.githubusercontent.com/LLGCAllIWantIsYou/urban-broccoli/refs/heads/main/WarningUI.lua"}).Body)()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LLGCAllIWantIsYou/urban-broccoli/refs/heads/main/WarningUI.lua"))()
 
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 
