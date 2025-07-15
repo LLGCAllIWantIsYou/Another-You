@@ -218,21 +218,6 @@ task.spawn(function()
     end
 end)
 
--- Z-367 Pandemonium (dripcapybara)
-
-task.spawn(function()
- 
-    while true do
- 
-        local sctm = math.random(4500,5600)
- 
-        task.wait(sctm)
-
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/DripCapybara/Doors-Mode-Remakes/refs/heads/main/PandemoniumProtected.lua"))() 
-
-    end
-
-end)
 
 -- SHY
 
