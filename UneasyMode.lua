@@ -1,2 +1,2 @@
 --== LOAD DIFF ==--
-This file was deleted.
+-- This file was deleted.
